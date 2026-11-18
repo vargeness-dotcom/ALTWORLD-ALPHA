@@ -1,1 +1,0 @@
-import type {WorldState} from './types'; const KEY='altworld.save.v1'; export const saveWorld=(w:WorldState)=>localStorage.setItem(KEY,JSON.stringify(w)); export const loadWorld=():WorldState|null=>{try{const x=localStorage.getItem(KEY);return x?JSON.parse(x):null}catch{return null}};
